@@ -35,4 +35,36 @@ hai and jo bhi hum changes karte hai vo copy mai hote hai
   }
 
   console.log(typeof bigNumber);
-  
+
+// Memory storing 
+// Stack (Primitive) , Heap (Non-Primitive)
+
+let myMummyname = "anita"
+let anotherName = myMummyname
+anotherName = "motimummy"
+
+console.log(myMummyname)
+console.log(anotherName)
+/**********STACK MEMORY************/
+//upar li gyi values primitive datatypes hai ,
+// inme kisi chij ki copy ka  aadan pradan 
+// hota hai naa ki actual value ka ✌️❤️
+// yha anotherName ki value  mai change karne
+// se MyMummyname ki value change nhi hui
+let userOne = {
+      email: "user@google.com",
+      upi: "user@ybl",
+}
+
+let userTwo = userOne
+
+userTwo.email = "sanju@google.com"
+console.log(userOne)
+console.log(userTwo)
+
+/************HEAP MEMORY*********/
+// referance ya non-primitive datatype mai 
+//value ik heap mai store hoti hai jha ik jagah value
+// change karne se har jagah value change hoti hai
+// jaise userTwo object ki email change karne se userOne
+// object ki email bhi change ho jayegi
