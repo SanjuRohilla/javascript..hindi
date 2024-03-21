@@ -36,3 +36,10 @@ console.log(String.fromCodePoint(1,8))
 const a = "❤️"
 console.log(a)
 
+let ab = "  Rahul   Kumar  "
+
+
+console.log(ab.slice(''))
+
+
+
