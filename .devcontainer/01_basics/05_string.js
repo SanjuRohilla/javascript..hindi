@@ -39,7 +39,7 @@ console.log(a)
 let ab = "  Rahul   Kumar  "
 
 
-console.log(ab.slice(''))
+const myArr = ab.split('')
 
 
 
