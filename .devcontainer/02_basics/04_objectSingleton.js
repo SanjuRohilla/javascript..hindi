@@ -72,36 +72,23 @@ const course = {
 }
 // course.courseInstructor
 const{courseinstructor: instructor}= course  // destructure of keys
-
 console.log(instructor)
+//API , apna kaam kisi or k sir pe daal dena , json se value aati hai
 
 
+// API IN OBJECT FORMAT
+// {
+//   "name": "Sanju"  ,
+//   "coursename": "js in hindi",
+//   "price": "free"
+// }
 
+//API IN ARRAY FORMAT
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+[
+    {},
+    {},
+    {},
+]
 
 
