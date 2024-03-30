@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DOM Chai aur Code</title>
+</head>
+<body style="background-color: black;color: azure;">
+    <ul class="language">
+        <li>javascript</li>
+    </ul>
+</body>
+<script>
+    function addLanguage(langName){
+        const a= document.createElement('li')
+        a.appendChild(document.createTextNode(langName))
+        return document.querySelector('.language').appendChild(a)
+    }
+    
+    addLanguage("python")
+    addLanguage("typescript")
+    addLanguage("golang")
+
+    // Edit
+    const thirdLang = document.querySelector("li:nth-child(3)")
+    const newLi = document.createElement('li')
+    newLi.textContent = "Mojo"
+    thirdLang.replaceWith(newLi)
+
+    //edit
+    const firstLang = document.querySelector("li:first-child")
+    firstLang.outerHTML = '<li>TypeScript</li>'
+
+    //remove
+    const lastLang = document.querySelector("li:last-child")
+    lastLang.remove()
+</script>
+</html>
