@@ -16,7 +16,7 @@ const newString = gameName.substring(0,4)
 // console.log(newString)
 
 const anotherString = gameName.slice(-13,5)
-// console.log(anotherString)
+ console.log(anotherString)
 
 const newStringOne = "   sanju    "
 const newStringTwo = "   rahul    "
@@ -25,18 +25,20 @@ const newStringTwo = "   rahul    "
 
 const url = "https://sanju.com/sanju%20roh%20illa" //browser space nhi smjhta vo space ko automatic '%' mai convert kar dega
 
-//console.log(url.replace('%20' , ' '))
+console.log(url.replace('%20' , ' '))
 
 //console.log(url.includes('%20'))
 
-//console.log(gameName.split('-')) //string to array based upon separator
+console.log(gameName.split('-')) //string to array based upon separator
 
 //console.log(String.fromCharCode(65535))
 //console.log(String.fromCodePoint(1,8))
 
 let ab = "  R     a   hu   l   Ku  m  ar         "
 let arr =  ab.split('') 
+console.log(arr)
 const filteredArray = arr.filter((item) => item!= ' ' )
+console.log(filteredArray)
 const myResult = filteredArray.reduce(function (accumulator,currentValue) {
     return accumulator+currentValue
 })

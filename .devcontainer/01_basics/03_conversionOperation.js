@@ -15,13 +15,13 @@ let isLoggedIn = 1
 
 let someNumber = 33
 let stringNumber= String(someNumber)
-//console.log(stringNumber)
+console.log(stringNumber)
 //console.log(typeof stringNumber)
 
 let a = (5-5)
 let b = Boolean(a)
-//console.log(typeof b)
-//console.log(b)
+console.log(typeof b)
+console.log(b)
 
 //*****************************operations**************************
 let value = 3

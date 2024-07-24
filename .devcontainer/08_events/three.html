@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color  changer</title>
+</head>
+<body>
+    <h1>Flying Jatt</h1>
+    <button id="start">Start</button>
+    <button id="stop">Stop</button>
+</body>
+<script>
+   const sayDate = function(){
+    //   let s = "#"
+    //   s+= Math.floor(Math.random()*10);
+    //   console.log(s);
+      let color = '#ff';
+      for(let  i=0 ; i < 4 ; i++){
+         color += Math.floor(Math.random()*10);
+      }
+      //color += 'f';
+      console.log(color)
+      document.querySelector('body').style.background = color;
+   }
+   let x;
+   document.querySelector('#start').addEventListener('click', function(){
+       x = setInterval(sayDate , 900, )
+   })
+   document.querySelector('#stop').addEventListener('click' , function(){
+        clearInterval(x);
+   })
+</script>    
+</html>

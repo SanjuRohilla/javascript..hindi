@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>API REquest</title>
+</head>
+<body style="background-color: #453445;">
+    
+     <!-- Value	State	              Description
+      0	   UNSENT	              Client has been created. open() not called yet.
+      1	   OPENED	              open() has been called.
+      2	   HEADERS_RECEIVED	      send() has been called, and headers and status are available.
+      3	   LOADING	              Downloading; responseText holds partial data.
+      4	   DONE	                  The operation is complete. 
+      -->
+    
+      <div id="box" style="border: solid black 5px; height: 100vh; width: 100vw; display: flex; flex-direction: column; justify-content: center; align-items: center;">
+               <button id="data">show data</button>
+      </div>
+
+
+
+</body>
+<script>
+    const requestUrl  = 'https://api.github.com/users/SanjuRohilla' ;
+     const xhr = new XMLHttpRequest();
+     xhr.open('GET' , requestUrl);
+     let data;
+     xhr.onreadystatechange = function(){
+        console.log(xhr.readyState);
+        if(xhr.readyState === 4){
+            data = JSON.parse(this.responseText);
+            //console.log(data.avatar_url);
+        }
+     }
+     xhr.send() ;         //aisa karne se open call hota hai
+      
+     document.querySelector('#data').addEventListener('click' ,function(){
+         let p = document.createElement('img')
+          let s = data.avatar_url ;
+           p.src  = s;
+          document.querySelector('#box').appendChild(p);
+     } )
+
+</script>
+</html>
